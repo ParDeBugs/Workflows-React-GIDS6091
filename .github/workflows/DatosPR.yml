@@ -1,0 +1,17 @@
+name: Datos del Pull Request
+on: 
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  Tarea2:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Imprimir datos del PR
+        run: |
+          echo "Datos destino (Rama Base): ${{ github.event.pull_request.base.ref }}"
+          echo "Datos origen (Rama Head): ${{ github.event.pull_request.head.ref }}"
+          echo "Título: ${{ github.event.pull_request.title }}"
+          echo "Contenido del PR: ${{ github.event.pull_request.body }}"
+          echo "Estado: ${{ github.event.pull_request.state }}"
+          echo "¿Ya fue fusionado?: ${{ github.event.pull_request.merged }}"
