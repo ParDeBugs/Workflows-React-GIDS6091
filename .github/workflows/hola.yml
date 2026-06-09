@@ -9,3 +9,6 @@ jobs:
     steps:
       - name: Dí Hola
         run: echo "Hello World Mr. Uriel"
+
+      - name: decir-fecha
+        run: date
